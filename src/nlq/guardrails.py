@@ -8,7 +8,7 @@ Post-LLM: Sanity-check the parsed result before executing the query.
 from __future__ import annotations
 
 import re
-from query_parser import ParseResult
+from src.nlq.query_parser import ParseResult
 
 
 # ──────────────────────────────────────────────────────────────────

@@ -7,8 +7,8 @@ from __future__ import annotations
 from fastapi import APIRouter, HTTPException, Query
 from fastapi.responses import JSONResponse
 from models import NodeResponse, NeighborhoodResponse, GraphMetadataResponse, FlowTraceResponse
-from dependency import get_graph, GRAPHML_PATH
-from graph_queries import get_node, neighborhood as gq_neighborhood, trace_flow, to_visjs_format, resolve_node_id
+from src.api.dependency import get_graph, GRAPHML_PATH
+from src.query.graph_queries import get_node, neighborhood as gq_neighborhood, trace_flow, to_visjs_format, resolve_node_id
 
 router = APIRouter(prefix="/graph", tags=["Graph"])
 

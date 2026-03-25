@@ -18,16 +18,16 @@ from pathlib import Path
 # Ensure src/ is on sys.path when run from project root
 sys.path.insert(0, os.path.dirname(__file__))
 
-from file_scanner import scan_data_directory, print_manifest_summary
-from profiler import load_jsonl, load_entity_records, profile_entity, save_profiles
-from schema_inference import (
+from src.file_scanner import scan_data_directory, print_manifest_summary
+from src.profiler import load_jsonl, load_entity_records, profile_entity, save_profiles
+from src.schema_inference import (
     ENTITY_SCHEMAS,
     get_schema_for_entity,
     save_schema_summary,
 )
-from transformer import transform_entity
-from storage_writer import write_sqlite, write_csv, write_parquet
-from validator import validate_database, print_validation_report
+from src.transformer import transform_entity
+from src.storage_writer import write_sqlite, write_csv, write_parquet
+from src.validator import validate_database, print_validation_report
 
 # ──────────────────────────────────────────────────────────────────
 # Paths

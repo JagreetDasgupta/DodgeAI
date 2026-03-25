@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
 from models import QueryRequest, QueryResponse
-from dependency import get_chat_service
+from src.api.dependency import get_chat_service
 
 router = APIRouter(tags=["Query"])
 

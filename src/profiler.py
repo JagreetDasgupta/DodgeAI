@@ -10,7 +10,7 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-from file_scanner import EntityManifest
+from src.file_scanner import EntityManifest
 
 
 def load_jsonl(filepath: str) -> list[dict]:

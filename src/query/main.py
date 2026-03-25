@@ -15,13 +15,13 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(__file__))
 
-from query_models import QueryRequest
-from query_router import QueryEngine
+from src.query.query_models import QueryRequest
+from src.query.query_router import QueryEngine
 
 # ──────────────────────────────────────────────────────────────────
 # Paths
 # ──────────────────────────────────────────────────────────────────
-from config import DB_PATH, GRAPH_PATH
+from src.config import DB_PATH, GRAPH_PATH
 
 DB_PATH_OBJ = Path(DB_PATH)
 GRAPHML_PATH_OBJ = Path(GRAPH_PATH)

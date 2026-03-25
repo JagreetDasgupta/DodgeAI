@@ -7,7 +7,7 @@ metadata, making them easy for Phase 4's LLM to consume.
 
 from __future__ import annotations
 
-from query_models import QueryRequest, QueryResponse
+from src.query.query_models import QueryRequest, QueryResponse
 
 
 def format_aggregation(

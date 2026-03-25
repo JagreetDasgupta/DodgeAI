@@ -11,7 +11,7 @@ import networkx as nx
 from pathlib import Path
 from typing import Any
 
-from graph_loader import load_schema, load_table_rows
+from src.graph.graph_loader import load_schema, load_table_rows
 
 
 # ──────────────────────────────────────────────────────────────────

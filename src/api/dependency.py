@@ -17,13 +17,13 @@ for _d in [_NLQ_DIR, _QUERY_DIR]:
     if _d not in sys.path:
         sys.path.insert(0, _d)
 
-from chat_service import ChatService, create_service
-from graph_queries import _load_graph, get_node, neighborhood as gq_neighborhood
-from query_router import QueryEngine
-from sql_queries import list_available_metrics
-from anomaly_checks import list_available_checks
+from src.nlq.chat_service import ChatService, create_service
+from src.query.graph_queries import _load_graph, get_node, neighborhood as gq_neighborhood
+from src.query.query_router import QueryEngine
+from src.query.sql_queries import list_available_metrics
+from src.query.anomaly_checks import list_available_checks
 
-from config import DB_PATH, GRAPH_PATH
+from src.config import DB_PATH, GRAPH_PATH
 
 # Paths
 DB_PATH_OBJ = Path(DB_PATH)

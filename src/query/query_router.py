@@ -13,9 +13,9 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from query_models import QueryRequest, QueryResponse
-from sql_queries import run_aggregation, list_available_metrics
-from graph_queries import (
+from src.query.query_models import QueryRequest, QueryResponse
+from src.query.sql_queries import run_aggregation, list_available_metrics
+from src.query.graph_queries import (
     resolve_node_id,
     trace_flow,
     neighborhood,
@@ -23,7 +23,7 @@ from graph_queries import (
     top_degree_nodes,
     uncertain_edges,
 )
-from anomaly_checks import run_integrity_check, list_available_checks
+from src.query.anomaly_checks import run_integrity_check, list_available_checks
 from result_formatter import (
     format_aggregation,
     format_flow_trace,

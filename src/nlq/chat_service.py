@@ -20,14 +20,14 @@ _QUERY_DIR = str(Path(__file__).resolve().parent.parent / "query")
 if _QUERY_DIR not in sys.path:
     sys.path.insert(0, _QUERY_DIR)
 
-from intent_classifier import classify, LLMProvider, OfflineProvider, GeminiProvider, GroqProvider
-from query_parser import parse_llm_output, ParseResult
-from guardrails import pre_check, post_check
-from response_summarizer import summarize
+from src.nlq.intent_classifier import classify, LLMProvider, OfflineProvider, GeminiProvider, GroqProvider
+from src.nlq.query_parser import parse_llm_output, ParseResult
+from src.nlq.guardrails import pre_check, post_check
+from src.nlq.response_summarizer import summarize
 
 # Phase 3 imports
-from query_models import QueryRequest
-from query_router import QueryEngine
+from src.query.query_models import QueryRequest
+from src.query.query_router import QueryEngine
 
 
 class ChatService:
@@ -134,7 +134,7 @@ def create_service(
 
     provider_name: "gemini" | "groq" | "offline" (default)
     """
-    from config import DB_PATH, GRAPH_PATH
+    from src.config import DB_PATH, GRAPH_PATH
     
     db = db_path or Path(DB_PATH)
     gml = graphml_path or Path(GRAPH_PATH)

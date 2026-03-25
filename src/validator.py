@@ -13,7 +13,7 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
-from schema_inference import ENTITY_SCHEMAS
+from src.schema_inference import ENTITY_SCHEMAS
 
 
 # ──────────────────────────────────────────────────────────────────
@@ -223,7 +223,7 @@ if __name__ == "__main__":
     # Allow running from project root or src/
     sys.path.insert(0, os.path.dirname(__file__))
 
-    from config import DB_PATH
+    from src.config import DB_PATH
 
     db = Path(DB_PATH)
     if not db.exists():

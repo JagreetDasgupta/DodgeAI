@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter
 from models import HealthResponse, SupportedQueriesResponse
-from dependency import get_schema_summary, DB_PATH, GRAPHML_PATH
+from src.api.dependency import get_schema_summary, DB_PATH, GRAPHML_PATH
 
 router = APIRouter(tags=["Meta"])
 
@@ -39,8 +39,8 @@ async def supported_queries():
         SUPPORTED_RELATIONSHIP_METRICS,
         SUPPORTED_ENTITY_TYPES,
     )
-    from sql_queries import list_available_metrics
-    from anomaly_checks import list_available_checks
+    from src.query.sql_queries import list_available_metrics
+    from src.query.anomaly_checks import list_available_checks
 
     return SupportedQueriesResponse(
         query_types=[

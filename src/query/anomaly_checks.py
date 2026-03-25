@@ -13,7 +13,7 @@ from __future__ import annotations
 import sqlite3
 from pathlib import Path
 
-from graph_queries import _load_graph
+from src.query.graph_queries import _load_graph
 
 
 def _connect(db_path: Path) -> sqlite3.Connection:

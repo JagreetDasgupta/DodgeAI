@@ -17,7 +17,7 @@ import networkx as nx
 from pathlib import Path
 from typing import Any
 
-from graph_loader import load_schema
+from src.graph.graph_loader import load_schema
 from graph_traversal import (
     find_disconnected_nodes,
     find_disconnected_by_type,

@@ -13,7 +13,7 @@ Transforms raw JSONL records into clean, flat dicts ready for SQL storage:
 import re
 from typing import Any
 
-from schema_inference import camel_to_snake
+from src.schema_inference import camel_to_snake
 
 
 # ──────────────────────────────────────────────────────────────────

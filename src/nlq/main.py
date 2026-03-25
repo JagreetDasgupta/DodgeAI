@@ -24,7 +24,7 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(__file__))
 
-from chat_service import create_service
+from src.nlq.chat_service import create_service
 
 # ──────────────────────────────────────────────────────────────────
 # Paths

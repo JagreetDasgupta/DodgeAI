@@ -30,15 +30,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
-from routes_query import router as query_router
-from routes_graph import router as graph_router
-from routes_meta import router as meta_router
+from src.api.routes_query import router as query_router
+from src.api.routes_graph import router as graph_router
+from src.api.routes_meta import router as meta_router
 
 # ──────────────────────────────────────────────────────────────────
 # App
 # ──────────────────────────────────────────────────────────────────
 
-from config import DB_PATH
+from src.config import DB_PATH
 import os
 
 app = FastAPI(
