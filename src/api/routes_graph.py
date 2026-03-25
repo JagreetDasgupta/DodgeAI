@@ -7,7 +7,8 @@ from __future__ import annotations
 from fastapi import APIRouter, HTTPException, Query
 from fastapi.responses import JSONResponse
 from models import NodeResponse, NeighborhoodResponse, GraphMetadataResponse, FlowTraceResponse
-from src.api.dependency import get_graph, GRAPHML_PATH
+from src.api.dependency import get_graph
+from src.config import GRAPH_PATH
 from src.query.graph_queries import get_node, neighborhood as gq_neighborhood, trace_flow, to_visjs_format, resolve_node_id
 
 router = APIRouter(prefix="/graph", tags=["Graph"])
@@ -38,7 +39,7 @@ async def get_neighbors(node_id: str, depth: int = Query(2, ge=1, le=5)):
             }
         )
 
-    result = gq_neighborhood(GRAPHML_PATH, resolved_id, depth=depth)
+    result = gq_neighborhood(GRAPH_PATH, resolved_id, depth=depth)
     if result.get("status") == "not_found":
         return NeighborhoodResponse(status="not_found", center_node=resolved_id, depth=depth)
     return NeighborhoodResponse(
@@ -74,7 +75,7 @@ async def get_flow_trace(node_id: str, depth: int = Query(8, ge=1, le=10)):
             }
         )
 
-    result = trace_flow(GRAPHML_PATH, resolved_id, depth=depth)
+    result = trace_flow(GRAPH_PATH, resolved_id, depth=depth)
     if result.get("status") == "not_found":
         return FlowTraceResponse(status="not_found", start_node=resolved_id, depth=depth)
     

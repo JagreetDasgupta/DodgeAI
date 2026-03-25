@@ -6,7 +6,9 @@ from __future__ import annotations
 
 from fastapi import APIRouter
 from models import HealthResponse, SupportedQueriesResponse
-from src.api.dependency import get_schema_summary, DB_PATH, GRAPHML_PATH
+from src.api.dependency import get_schema_summary
+from src.config import DB_PATH, GRAPH_PATH
+import os
 
 router = APIRouter(tags=["Meta"])
 
@@ -18,8 +20,8 @@ async def health():
         status="ok",
         phase="5",
         components={
-            "database": DB_PATH.exists(),
-            "graph": GRAPHML_PATH.exists(),
+            "database": os.path.exists(DB_PATH),
+            "graph": os.path.exists(GRAPH_PATH),
         },
     )
 
