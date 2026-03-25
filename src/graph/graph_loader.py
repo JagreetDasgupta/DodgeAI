@@ -24,7 +24,7 @@ def load_table_rows(db_path: Path, table_name: str) -> list[dict[str, Any]]:
     Load all rows from *table_name* as a list of dicts.
     Column names become dict keys.
     """
-    conn = sqlite3.connect(str(db_path))
+    conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
     cur.execute(f'SELECT * FROM "{table_name}"')
@@ -35,7 +35,7 @@ def load_table_rows(db_path: Path, table_name: str) -> list[dict[str, Any]]:
 
 def get_table_columns(db_path: Path, table_name: str) -> list[str]:
     """Return ordered column names for a table."""
-    conn = sqlite3.connect(str(db_path))
+    conn = sqlite3.connect(db_path)
     cur = conn.cursor()
     cur.execute(f'PRAGMA table_info("{table_name}")')
     cols = [row[1] for row in cur.fetchall()]

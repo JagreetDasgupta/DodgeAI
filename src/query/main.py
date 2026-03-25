@@ -21,9 +21,10 @@ from query_router import QueryEngine
 # ──────────────────────────────────────────────────────────────────
 # Paths
 # ──────────────────────────────────────────────────────────────────
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-DB_PATH = PROJECT_ROOT / "output" / "sap_o2c.db"
-GRAPHML_PATH = PROJECT_ROOT / "output" / "graph" / "sap_o2c_graph.graphml"
+from config import DB_PATH, GRAPH_PATH
+
+DB_PATH_OBJ = Path(DB_PATH)
+GRAPHML_PATH_OBJ = Path(GRAPH_PATH)
 OUTPUT_DIR = PROJECT_ROOT / "output" / "query"
 
 

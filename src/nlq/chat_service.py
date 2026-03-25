@@ -134,9 +134,10 @@ def create_service(
 
     provider_name: "gemini" | "groq" | "offline" (default)
     """
-    project_root = Path(__file__).resolve().parent.parent.parent
-    db = db_path or project_root / "output" / "sap_o2c.db"
-    gml = graphml_path or project_root / "output" / "graph" / "sap_o2c_graph.graphml"
+    from config import DB_PATH, GRAPH_PATH
+    
+    db = db_path or Path(DB_PATH)
+    gml = graphml_path or Path(GRAPH_PATH)
 
     providers = {
         "gemini": GeminiProvider,

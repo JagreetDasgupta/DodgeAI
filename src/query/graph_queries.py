@@ -19,10 +19,14 @@ import json
 _GRAPH_CACHE: dict[str, nx.DiGraph] = {}
 
 
+import os
+
 def _load_graph(graphml_path: Path) -> nx.DiGraph:
     key = str(graphml_path)
     if key not in _GRAPH_CACHE:
-        _GRAPH_CACHE[key] = nx.read_graphml(str(graphml_path))
+        if not os.path.exists(graphml_path):
+            raise RuntimeError(f"Graph file not found at {graphml_path}")
+        _GRAPH_CACHE[key] = nx.read_graphml(graphml_path)
     return _GRAPH_CACHE[key]
 
 

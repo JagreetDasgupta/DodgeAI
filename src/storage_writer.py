@@ -67,7 +67,7 @@ def write_sqlite(
     col_types = _infer_column_types(records)
     columns = list(records[0].keys())
 
-    conn = sqlite3.connect(str(db_path))
+    conn = sqlite3.connect(db_path)
     cur = conn.cursor()
 
     # Build CREATE TABLE DDL

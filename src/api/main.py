@@ -38,11 +38,17 @@ from routes_meta import router as meta_router
 # App
 # ──────────────────────────────────────────────────────────────────
 
+from config import DB_PATH
+import os
+
 app = FastAPI(
     title="SAP O2C Query System",
     description="Graph-Based Data Modeling and Query System — API Layer (Phase 5)",
     version="1.0.0",
 )
+
+print("DB PATH:", DB_PATH)
+print("DB EXISTS:", os.path.exists(DB_PATH))
 
 # CORS for frontend dev
 app.add_middleware(

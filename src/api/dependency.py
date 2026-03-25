@@ -23,20 +23,22 @@ from query_router import QueryEngine
 from sql_queries import list_available_metrics
 from anomaly_checks import list_available_checks
 
+from config import DB_PATH, GRAPH_PATH
+
 # Paths
-DB_PATH = _PROJECT_ROOT / "output" / "sap_o2c.db"
-GRAPHML_PATH = _PROJECT_ROOT / "output" / "graph" / "sap_o2c_graph.graphml"
+DB_PATH_OBJ = Path(DB_PATH)
+GRAPHML_PATH_OBJ = Path(GRAPH_PATH)
 SCHEMA_PATH = _PROJECT_ROOT / "output" / "schema_summary.json"
 
 
 @lru_cache(maxsize=4)
 def get_chat_service(provider_name: str = "offline") -> ChatService:
-    return create_service(DB_PATH, GRAPHML_PATH, provider_name=provider_name)
+    return create_service(DB_PATH_OBJ, GRAPHML_PATH_OBJ, provider_name=provider_name)
 
 
 @lru_cache(maxsize=1)
 def get_graph():
-    return _load_graph(GRAPHML_PATH)
+    return _load_graph(GRAPHML_PATH_OBJ)
 
 
 def get_schema_summary() -> dict:

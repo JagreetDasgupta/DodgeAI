@@ -111,7 +111,7 @@ def validate_database(db_path: Path) -> dict:
 
     Returns a dict with per-entity results.
     """
-    conn = sqlite3.connect(str(db_path))
+    conn = sqlite3.connect(db_path)
     cur = conn.cursor()
 
     results: dict[str, Any] = {}
@@ -223,7 +223,9 @@ if __name__ == "__main__":
     # Allow running from project root or src/
     sys.path.insert(0, os.path.dirname(__file__))
 
-    db = Path(__file__).resolve().parent.parent / "output" / "sap_o2c.db"
+    from config import DB_PATH
+
+    db = Path(DB_PATH)
     if not db.exists():
         print(f"Database not found at {db}. Run main.py first.")
         sys.exit(1)
