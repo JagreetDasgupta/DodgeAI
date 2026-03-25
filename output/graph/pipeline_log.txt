@@ -1,0 +1,106 @@
+========================================================================
+PHASE 2  -  GRAPH CONSTRUCTION PIPELINE
+========================================================================
+
+>> Stage 1: Building graph from SQLite + schema ...
+   Nodes: 21,393
+   Edges: 24,994
+   Uncertain edges: 482
+   Weakly connected components: 1
+
+>> Stage 2: Validating graph ...
+
+========================================================================
+GRAPH VALIDATION REPORT
+========================================================================
+
+  Nodes: 21,393
+  Edges: 24,994
+  Uncertain edges: 482
+  Connected components: 1
+  Largest component: 21,393 nodes
+
+  FK coverage: 21 / 21
+
+  Disconnected nodes: 0
+
+  Incomplete O2C flows: 100 / 100 orders
+    sales_order_headers::740506
+      missing: outbound_delivery_items, outbound_delivery_headers, billing_document_items, billing_document_headers, journal_entry_items_ar, payments_accounts_receivable
+    sales_order_headers::740507
+      missing: outbound_delivery_items, outbound_delivery_headers, billing_document_items, billing_document_headers, journal_entry_items_ar, payments_accounts_receivable
+    sales_order_headers::740508
+      missing: outbound_delivery_items, outbound_delivery_headers, billing_document_items, billing_document_headers, journal_entry_items_ar, payments_accounts_receivable
+
+  Node counts by type:
+    billing_document_cancellations: 80
+    billing_document_headers: 163
+    billing_document_items: 245
+    business_partner_addresses: 8
+    business_partners: 8
+    customer_company_assignments: 8
+    customer_sales_area_assignments: 28
+    journal_entry_items_ar: 123
+    outbound_delivery_headers: 86
+    outbound_delivery_items: 137
+    payments_accounts_receivable: 120
+    plants: 44
+    product_descriptions: 69
+    product_plants: 3036
+    product_storage_locations: 16723
+    products: 69
+    sales_order_headers: 100
+    sales_order_items: 167
+    sales_order_schedule_lines: 179
+
+  Edge counts by type:
+    billing_document_cancellations->billing_document_headers: 80
+    billing_document_headers->business_partners: 163
+    billing_document_items->billing_document_headers: 245
+    billing_document_items->outbound_delivery_headers: 245
+    business_partner_addresses->business_partners: 8
+    customer_company_assignments->business_partners: 8
+    customer_sales_area_assignments->business_partners: 28
+    journal_entry_items_ar->billing_document_headers: 123
+    journal_entry_items_ar->business_partners: 123
+    outbound_delivery_items->outbound_delivery_headers: 137
+    outbound_delivery_items->sales_order_headers: 137
+    payments_accounts_receivable->business_partners: 120
+    payments_accounts_receivable->journal_entry_items_ar: 100
+    product_descriptions->products: 69
+    product_plants->plants: 3036
+    product_plants->products: 3036
+    product_storage_locations->product_plants: 16723
+    sales_order_headers->business_partners: 100
+    sales_order_items->products: 167
+    sales_order_items->sales_order_headers: 167
+    sales_order_schedule_lines->sales_order_items: 179
+
+========================================================================
+   Validation report saved to C:\Users\jagre\OneDrive\Desktop\Dodge AI\output\graph\validation_report.json
+
+>> Stage 3: Exporting graph ...
+   GraphML:  C:\Users\jagre\OneDrive\Desktop\Dodge AI\output\graph\sap_o2c_graph.graphml
+   JSON:     C:\Users\jagre\OneDrive\Desktop\Dodge AI\output\graph\sap_o2c_graph.json
+   Nodes CSV: C:\Users\jagre\OneDrive\Desktop\Dodge AI\output\graph\nodes.csv
+   Edges CSV: C:\Users\jagre\OneDrive\Desktop\Dodge AI\output\graph\edges.csv
+
+>> Stage 4: Sample order flow trace ...
+   Tracing flow for: sales_order_headers::740506
+     sales_order_headers: 1 node(s)
+     sales_order_items: 5 node(s)
+     outbound_delivery_items: -- none --
+     outbound_delivery_headers: -- none --
+     billing_document_items: -- none --
+     billing_document_headers: -- none --
+     journal_entry_items_ar: -- none --
+     payments_accounts_receivable: -- none --
+
+========================================================================
+PHASE 2 PIPELINE COMPLETE
+========================================================================
+  Graph artifacts: C:\Users\jagre\OneDrive\Desktop\Dodge AI\output\graph
+  Total nodes:     21,393
+  Total edges:     24,994
+  Uncertain edges: 482
+

@@ -1,0 +1,9 @@
+business_partner,customer,business_partner_category,business_partner_full_name,business_partner_grouping,business_partner_name,created_by_user,creation_date,creation_time,form_of_address,last_change_date,organization_bp_name1,organization_bp_name2,business_partner_is_blocked,is_marked_for_archiving,_source_file,_source_row
+310000108,310000108,2,"Cardenas, Parker and Avila",Y101,"Cardenas, Parker and Avila",USER750,2024-04-16,13:36:43,0003,2025-06-27,"Cardenas, Parker and Avila",,0,0,part-20251119-133435-168.jsonl,1
+310000109,310000109,2,Bradley-Kelley,Y101,Bradley-Kelley,USER750,2024-04-16,13:36:43,0003,2025-11-06,Bradley-Kelley,,0,0,part-20251119-133435-168.jsonl,2
+320000082,320000082,2,Nguyen-Davis,Y102,Nguyen-Davis,USER108,2024-11-20,13:32:01,0003,2025-09-10,Nguyen-Davis,,1,1,part-20251119-133435-168.jsonl,3
+320000083,320000083,2,"Nelson, Fitzpatrick and Jordan",Y102,"Nelson, Fitzpatrick and Jordan",USER108,2024-11-20,13:32:01,0003,2025-09-11,Torres-Williams,Torres-Williams,1,1,part-20251119-133435-168.jsonl,4
+320000085,320000085,2,Hawkins Ltd,Y102,Hawkins Ltd,USER108,2024-11-20,13:32:02,0003,2025-09-11,Hawkins Ltd,,1,1,part-20251119-133435-168.jsonl,5
+320000088,320000088,2,Flores-Simmons,Y102,Flores-Simmons,USER108,2024-11-20,13:32:02,0003,2025-09-11,Flores-Simmons,,1,1,part-20251119-133435-168.jsonl,6
+320000107,320000107,2,"Henderson, Garner and Graves",Y102,"Henderson, Garner and Graves",USER108,2024-11-20,13:32:06,0003,2025-09-11,"Henderson, Garner and Graves",,1,1,part-20251119-133435-168.jsonl,7
+320000108,320000108,2,Melton Group,Y102,Melton Group,USER108,2024-11-20,13:32:06,0003,2025-09-11,Melton Group,,1,1,part-20251119-133435-168.jsonl,8

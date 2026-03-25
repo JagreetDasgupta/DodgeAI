@@ -1,0 +1,290 @@
+========================================================================
+PHASE 3  ΓÇö  DETERMINISTIC QUERY ENGINE  ΓÇö  DEMO
+========================================================================
+
+
+>> AGGREGATION QUERIES
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Aggregation: customer_sales_order_count
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Customers by number of sales orders
+  total_count: 5
+  [1] {'sold_to_party': '320000083', 'cnt': 72}
+  [2] {'sold_to_party': '320000082', 'cnt': 9}
+  [3] {'sold_to_party': '320000108', 'cnt': 7}
+  [4] {'sold_to_party': '320000107', 'cnt': 7}
+  [5] {'sold_to_party': '310000109', 'cnt': 2}
+  metric: customer_sales_order_count
+  order_by: desc
+  limit: 5
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Aggregation: product_billing_document_count
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Products by number of billing document items
+  total_count: 5
+  [1] {'material': 'S8907367039280', 'cnt': 22}
+  [2] {'material': 'S8907367008620', 'cnt': 22}
+  [3] {'material': 'S8907367042006', 'cnt': 16}
+  [4] {'material': 'S8907367013532', 'cnt': 15}
+  [5] {'material': 'S8907367001003', 'cnt': 9}
+  metric: product_billing_document_count
+  order_by: desc
+  limit: 5
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Aggregation: billing_document_item_count
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Billing documents by number of items
+  total_count: 5
+  [1] {'billing_document': '90504243', 'cnt': 12}
+  [2] {'billing_document': '91150188', 'cnt': 12}
+  [3] {'billing_document': '90504265', 'cnt': 6}
+  [4] {'billing_document': '91150174', 'cnt': 6}
+  [5] {'billing_document': '90504253', 'cnt': 5}
+  metric: billing_document_item_count
+  order_by: desc
+  limit: 5
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Aggregation: plant_product_count
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Plants by number of products
+  total_count: 5
+  [1] {'plant': 'WB07', 'cnt': 69}
+  [2] {'plant': 'WB05', 'cnt': 69}
+  [3] {'plant': 'UP07', 'cnt': 69}
+  [4] {'plant': 'UP05', 'cnt': 69}
+  [5] {'plant': 'TM07', 'cnt': 69}
+  metric: plant_product_count
+  order_by: desc
+  limit: 5
+
+
+>> FLOW TRACING QUERIES
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Flow: sales_order_headers::740506
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Flow trace from sales_order_headers node
+  total_count: 21365
+  [1] {'entity_type': 'sales_order_headers', 'count': 100, 'node_ids': ['sales_order_headers::740506', 'sales_order_headers::740582', 'sales_order_headers::740593', 'sales_order_headers::740507', 'sales_order_headers::740548', 'sales_order_headers::740529', 'sales_order_headers::740552', 'sales_order_headers::740508', 'sales_order_headers::740526', 'sales_order_headers::740569', 'sales_order_headers::740570', 'sales_order_headers::740535', 'sales_order_headers::740568', 'sales_order_headers::740596', 'sales_order_headers::740511', 'sales_order_headers::740583', 'sales_order_headers::740565', 'sales_order_headers::740538', 'sales_order_headers::740587', 'sales_order_headers::740557', 'sales_order_headers::740559', 'sales_order_headers::740580', 'sales_order_headers::740510', 'sales_order_headers::740575', 'sales_order_headers::740576', 'sales_order_headers::740571', 'sales_order_headers::740521', 'sales_order_headers::740528', 'sales_order_headers::740517', 'sales_order_headers::740573', 'sales_order_headers::740558', 'sales_order_headers::740560', 'sales_order_headers::740549', 'sales_order_headers::740555', 'sales_order_headers::740522', 'sales_order_headers::740509', 'sales_order_headers::740581', 'sales_order_headers::740513', 'sales_order_headers::740536', 'sales_order_headers::740556', 'sales_order_headers::740567', 'sales_order_headers::740531', 'sales_order_headers::740524', 'sales_order_headers::740574', 'sales_order_headers::740601', 'sales_order_headers::740527', 'sales_order_headers::740554', 'sales_order_headers::740590', 'sales_order_headers::740525', 'sales_order_headers::740566', 'sales_order_headers::740519', 'sales_order_headers::740595', 'sales_order_headers::740598', 'sales_order_headers::740551', 'sales_order_headers::740604', 'sales_order_headers::740534', 'sales_order_headers::740530', 'sales_order_headers::740515', 'sales_order_headers::740577', 'sales_order_headers::740579', 'sales_order_headers::740540', 'sales_order_headers::740550', 'sales_order_headers::740586', 'sales_order_headers::740518', 'sales_order_headers::740553', 'sales_order_headers::740562', 'sales_order_headers::740561', 'sales_order_headers::740514', 'sales_order_headers::740563', 'sales_order_headers::740572', 'sales_order_headers::740592', 'sales_order_headers::740512', 'sales_order_headers::740520', 'sales_order_headers::740516', 'sales_order_headers::740523', 'sales_order_headers::740547', 'sales_order_headers::740564', 'sales_order_headers::740578', 'sales_order_headers::740533', 'sales_order_headers::740541', 'sales_order_headers::740544', 'sales_order_headers::740542', 'sales_order_headers::740537', 'sales_order_headers::740543', 'sales_order_headers::740532', 'sales_order_headers::740539', 'sales_order_headers::740585', 'sales_order_headers::740600', 'sales_order_headers::740589', 'sales_order_headers::740597', 'sales_order_headers::740605', 'sales_order_headers::740602', 'sales_order_headers::740599', 'sales_order_headers::740603', 'sales_order_headers::740594', 'sales_order_headers::740588', 'sales_order_headers::740584', 'sales_order_headers::740591', 'sales_order_headers::740545', 'sales_order_headers::740546']}
+  [2] {'entity_type': 'sales_order_items', 'count': 167, 'node_ids': ['sales_order_items::740506::10', 'sales_order_items::740506::20', 'sales_order_items::740506::30', 'sales_order_items::740506::40', 'sales_order_items::740506::50', 'sales_order_items::740508::20', 'sales_order_items::740507::20', 'sales_order_items::740569::10', 'sales_order_items::740508::40', 'sales_order_items::740568::10', 'sales_order_items::740507::40', 'sales_order_items::740593::10', 'sales_order_items::740565::10', 'sales_order_items::740570::10', 'sales_order_items::740529::10', 'sales_order_items::740582::10', 'sales_order_items::740596::10', 'sales_order_items::740552::10', 'sales_order_items::740511::10', 'sales_order_items::740508::10', 'sales_order_items::740583::10', 'sales_order_items::740507::10', 'sales_order_items::740508::30', 'sales_order_items::740507::30', 'sales_order_items::740526::10', 'sales_order_items::740548::10', 'sales_order_items::740535::10', 'sales_order_items::740573::20', 'sales_order_items::740573::10', 'sales_order_items::740554::10', 'sales_order_items::740542::10', 'sales_order_items::740542::20', 'sales_order_items::740542::30', 'sales_order_items::740536::10', 'sales_order_items::740515::10', 'sales_order_items::740578::10', 'sales_order_items::740539::10', 'sales_order_items::740549::50', 'sales_order_items::740602::10', 'sales_order_items::740589::10', 'sales_order_items::740603::10', 'sales_order_items::740604::40', 'sales_order_items::740541::10', 'sales_order_items::740544::10', 'sales_order_items::740561::10', 'sales_order_items::740528::10', 'sales_order_items::740543::10', 'sales_order_items::740555::20', 'sales_order_items::740530::10', 'sales_order_items::740537::10', 'sales_order_items::740509::10', 'sales_order_items::740545::10', 'sales_order_items::740547::10', 'sales_order_items::740558::10', 'sales_order_items::740516::20', 'sales_order_items::740516::10', 'sales_order_items::740585::10', 'sales_order_items::740557::50', 'sales_order_items::740605::20', 'sales_order_items::740556::30', 'sales_order_items::740567::10', 'sales_order_items::740599::20', 'sales_order_items::740589::50', 'sales_order_items::740602::40', 'sales_order_items::740555::30', 'sales_order_items::740591::20', 'sales_order_items::740591::30', 'sales_order_items::740591::10', 'sales_order_items::740551::10', 'sales_order_items::740598::30', 'sales_order_items::740564::40', 'sales_order_items::740549::70', 'sales_order_items::740587::10', 'sales_order_items::740562::20', 'sales_order_items::740592::10', 'sales_order_items::740604::30', 'sales_order_items::740555::10', 'sales_order_items::740534::10', 'sales_order_items::740518::10', 'sales_order_items::740524::10', 'sales_order_items::740589::20', 'sales_order_items::740602::20', 'sales_order_items::740598::20', 'sales_order_items::740598::40', 'sales_order_items::740598::10', 'sales_order_items::740605::40', 'sales_order_items::740556::40', 'sales_order_items::740557::40', 'sales_order_items::740601::10', 'sales_order_items::740549::40', 'sales_order_items::740572::10', 'sales_order_items::740575::10', 'sales_order_items::740520::10', 'sales_order_items::740574::10', 'sales_order_items::740556::50', 'sales_order_items::740605::50', 'sales_order_items::740557::20', 'sales_order_items::740549::90', 'sales_order_items::740590::10', 'sales_order_items::740540::10', 'sales_order_items::740563::10', 'sales_order_items::740527::20', 'sales_order_items::740560::10', 'sales_order_items::740538::10', 'sales_order_items::740553::20', 'sales_order_items::740588::10', 'sales_order_items::740564::30', 'sales_order_items::740549::60', 'sales_order_items::740549::100', 'sales_order_items::740549::80', 'sales_order_items::740549::30', 'sales_order_items::740549::120', 'sales_order_items::740549::110', 'sales_order_items::740549::10', 'sales_order_items::740549::20', 'sales_order_items::740531::10', 'sales_order_items::740527::10', 'sales_order_items::740589::30', 'sales_order_items::740589::40', 'sales_order_items::740521::10', 'sales_order_items::740576::10', 'sales_order_items::740599::30', 'sales_order_items::740597::10', 'sales_order_items::740604::20', 'sales_order_items::740519::10', 'sales_order_items::740595::10', 'sales_order_items::740533::20', 'sales_order_items::740533::10', 'sales_order_items::740562::10', 'sales_order_items::740571::10', 'sales_order_items::740532::10', 'sales_order_items::740550::10', 'sales_order_items::740517::10', 'sales_order_items::740594::10', 'sales_order_items::740602::30', 'sales_order_items::740599::10', 'sales_order_items::740559::10', 'sales_order_items::740564::50', 'sales_order_items::740579::10', 'sales_order_items::740574::20', 'sales_order_items::740580::10', 'sales_order_items::740581::10', 'sales_order_items::740600::10', 'sales_order_items::740605::10', 'sales_order_items::740556::10', 'sales_order_items::740557::10', 'sales_order_items::740523::10', 'sales_order_items::740564::10', 'sales_order_items::740564::20', 'sales_order_items::740564::60', 'sales_order_items::740604::10', 'sales_order_items::740577::10', 'sales_order_items::740514::10', 'sales_order_items::740510::10', 'sales_order_items::740546::10', 'sales_order_items::740556::20', 'sales_order_items::740557::30', 'sales_order_items::740586::10', 'sales_order_items::740513::10', 'sales_order_items::740566::10', 'sales_order_items::740602::50', 'sales_order_items::740584::10', 'sales_order_items::740522::10', 'sales_order_items::740605::30', 'sales_order_items::740525::10', 'sales_order_items::740512::10', 'sales_order_items::740553::10']}
+  [3] {'entity_type': 'outbound_delivery_items', 'count': 135, 'node_ids': ['outbound_delivery_items::80737721::000050', 'outbound_delivery_items::80737721::000030', 'outbound_delivery_items::80737721::000010', 'outbound_delivery_items::80737721::000020', 'outbound_delivery_items::80737721::000040', 'outbound_delivery_items::80738060::000010', 'outbound_delivery_items::80737723::000040', 'outbound_delivery_items::80737723::000010', 'outbound_delivery_items::80737723::000030', 'outbound_delivery_items::80737723::000020', 'outbound_delivery_items::80738102::000010', 'outbound_delivery_items::80738103::000010', 'outbound_delivery_items::80738088::000010', 'outbound_delivery_items::80738090::000010', 'outbound_delivery_items::80738057::000010', 'outbound_delivery_items::80738089::000010', 'outbound_delivery_items::80738068::000010', 'outbound_delivery_items::80738042::000010', 'outbound_delivery_items::80754602::000010', 'outbound_delivery_items::80738072::000010', 'outbound_delivery_items::80738085::000010', 'outbound_delivery_items::80737722::000010', 'outbound_delivery_items::80737722::000040', 'outbound_delivery_items::80737722::000030', 'outbound_delivery_items::80737722::000020', 'outbound_delivery_items::80738093::000020', 'outbound_delivery_items::80738093::000010', 'outbound_delivery_items::80754606::000020', 'outbound_delivery_items::80754606::000030', 'outbound_delivery_items::80754606::000010', 'outbound_delivery_items::80738064::000010', 'outbound_delivery_items::80738046::000010', 'outbound_delivery_items::80738098::000010', 'outbound_delivery_items::80754604::000010', 'outbound_delivery_items::80754605::000010', 'outbound_delivery_items::80754576::000010', 'outbound_delivery_items::80738081::000010', 'outbound_delivery_items::80738059::000010', 'outbound_delivery_items::80738047::000010', 'outbound_delivery_items::80738047::000020', 'outbound_delivery_items::80754603::000010', 'outbound_delivery_items::80738087::000010', 'outbound_delivery_items::80738061::000010', 'outbound_delivery_items::80754575::000010', 'outbound_delivery_items::80738078::000010', 'outbound_delivery_items::80738040::000010', 'outbound_delivery_items::80738071::000010', 'outbound_delivery_items::80738105::000010', 'outbound_delivery_items::80738075::000020', 'outbound_delivery_items::80738075::000030', 'outbound_delivery_items::80738075::000010', 'outbound_delivery_items::80738049::000010', 'outbound_delivery_items::80738055::000010', 'outbound_delivery_items::80738109::000030', 'outbound_delivery_items::80738109::000010', 'outbound_delivery_items::80738109::000020', 'outbound_delivery_items::80738109::000040', 'outbound_delivery_items::80738110::000010', 'outbound_delivery_items::80738051::000010', 'outbound_delivery_items::80738106::000010', 'outbound_delivery_items::80738069::000050', 'outbound_delivery_items::80738069::000030', 'outbound_delivery_items::80738069::000120', 'outbound_delivery_items::80738069::000070', 'outbound_delivery_items::80738069::000100', 'outbound_delivery_items::80738069::000010', 'outbound_delivery_items::80738069::000080', 'outbound_delivery_items::80738069::000020', 'outbound_delivery_items::80738069::000110', 'outbound_delivery_items::80738069::000060', 'outbound_delivery_items::80738069::000040', 'outbound_delivery_items::80738069::000090', 'outbound_delivery_items::80738062::000010', 'outbound_delivery_items::80738058::000020', 'outbound_delivery_items::80738058::000010', 'outbound_delivery_items::80738052::000010', 'outbound_delivery_items::80738050::000010', 'outbound_delivery_items::80738108::000010', 'outbound_delivery_items::80754601::000020', 'outbound_delivery_items::80754601::000010', 'outbound_delivery_items::80738070::000010', 'outbound_delivery_items::80738048::000010', 'outbound_delivery_items::80738091::000010', 'outbound_delivery_items::80738099::000010', 'outbound_delivery_items::80738083::000010', 'outbound_delivery_items::80738100::000010', 'outbound_delivery_items::80738095::000010', 'outbound_delivery_items::80738054::000010', 'outbound_delivery_items::80738084::000050', 'outbound_delivery_items::80738084::000030', 'outbound_delivery_items::80738084::000060', 'outbound_delivery_items::80738084::000040', 'outbound_delivery_items::80738084::000010', 'outbound_delivery_items::80738084::000020', 'outbound_delivery_items::80738079::000010', 'outbound_delivery_items::80738111::000010', 'outbound_delivery_items::80738111::000020', 'outbound_delivery_items::80738111::000040', 'outbound_delivery_items::80738111::000030', 'outbound_delivery_items::80738097::000010', 'outbound_delivery_items::80738045::000010', 'outbound_delivery_items::80738107::000010', 'outbound_delivery_items::80738067::000010', 'outbound_delivery_items::80738096::000010', 'outbound_delivery_items::80738076::000030', 'outbound_delivery_items::80738076::000010', 'outbound_delivery_items::80738076::000050', 'outbound_delivery_items::80738076::000040', 'outbound_delivery_items::80738076::000020', 'outbound_delivery_items::80738077::000030', 'outbound_delivery_items::80738077::000050', 'outbound_delivery_items::80738077::000040', 'outbound_delivery_items::80738077::000010', 'outbound_delivery_items::80738077::000020', 'outbound_delivery_items::80738065::000010', 'outbound_delivery_items::80738041::000010', 'outbound_delivery_items::80738044::000010', 'outbound_delivery_items::80738086::000010', 'outbound_delivery_items::80738082::000010', 'outbound_delivery_items::80738082::000020', 'outbound_delivery_items::80738080::000010', 'outbound_delivery_items::80738101::000010', 'outbound_delivery_items::80754574::000010', 'outbound_delivery_items::80738094::000020', 'outbound_delivery_items::80738094::000010', 'outbound_delivery_items::80738066::000010', 'outbound_delivery_items::80738104::000010', 'outbound_delivery_items::80738056::000010', 'outbound_delivery_items::80738063::000010', 'outbound_delivery_items::80738073::000020', 'outbound_delivery_items::80738073::000010', 'outbound_delivery_items::80738092::000010', 'outbound_delivery_items::80738053::000010', 'outbound_delivery_items::80738074::000010', 'outbound_delivery_items::80738043::000010']}
+  [4] {'entity_type': 'outbound_delivery_headers', 'count': 84, 'node_ids': ['outbound_delivery_headers::80737721', 'outbound_delivery_headers::80737722', 'outbound_delivery_headers::80738102', 'outbound_delivery_headers::80738072', 'outbound_delivery_headers::80754602', 'outbound_delivery_headers::80738090', 'outbound_delivery_headers::80738088', 'outbound_delivery_headers::80738057', 'outbound_delivery_headers::80738103', 'outbound_delivery_headers::80737723', 'outbound_delivery_headers::80738085', 'outbound_delivery_headers::80738060', 'outbound_delivery_headers::80738089', 'outbound_delivery_headers::80738042', 'outbound_delivery_headers::80738068', 'outbound_delivery_headers::80738061', 'outbound_delivery_headers::80738077', 'outbound_delivery_headers::80738076', 'outbound_delivery_headers::80738108', 'outbound_delivery_headers::80738111', 'outbound_delivery_headers::80738067', 'outbound_delivery_headers::80738097', 'outbound_delivery_headers::80738096', 'outbound_delivery_headers::80738092', 'outbound_delivery_headers::80738109', 'outbound_delivery_headers::80754574', 'outbound_delivery_headers::80738083', 'outbound_delivery_headers::80754606', 'outbound_delivery_headers::80738078', 'outbound_delivery_headers::80738069', 'outbound_delivery_headers::80738058', 'outbound_delivery_headers::80738056', 'outbound_delivery_headers::80738110', 'outbound_delivery_headers::80738095', 'outbound_delivery_headers::80738070', 'outbound_delivery_headers::80738099', 'outbound_delivery_headers::80738091', 'outbound_delivery_headers::80738084', 'outbound_delivery_headers::80738082', 'outbound_delivery_headers::80738098', 'outbound_delivery_headers::80738047', 'outbound_delivery_headers::80738046', 'outbound_delivery_headers::80754575', 'outbound_delivery_headers::80738065', 'outbound_delivery_headers::80738080', 'outbound_delivery_headers::80738073', 'outbound_delivery_headers::80754601', 'outbound_delivery_headers::80754605', 'outbound_delivery_headers::80738052', 'outbound_delivery_headers::80738105', 'outbound_delivery_headers::80738075', 'outbound_delivery_headers::80738059', 'outbound_delivery_headers::80738094', 'outbound_delivery_headers::80754603', 'outbound_delivery_headers::80738101', 'outbound_delivery_headers::80738106', 'outbound_delivery_headers::80738093', 'outbound_delivery_headers::80754604', 'outbound_delivery_headers::80738081', 'outbound_delivery_headers::80738079', 'outbound_delivery_headers::80738040', 'outbound_delivery_headers::80738048', 'outbound_delivery_headers::80738066', 'outbound_delivery_headers::80738063', 'outbound_delivery_headers::80738074', 'outbound_delivery_headers::80738043', 'outbound_delivery_headers::80738049', 'outbound_delivery_headers::80738044', 'outbound_delivery_headers::80738086', 'outbound_delivery_headers::80738064', 'outbound_delivery_headers::80738107', 'outbound_delivery_headers::80754576', 'outbound_delivery_headers::80738071', 'outbound_delivery_headers::80738053', 'outbound_delivery_headers::80738050', 'outbound_delivery_headers::80738100', 'outbound_delivery_headers::80738087', 'outbound_delivery_headers::80738054', 'outbound_delivery_headers::80738045', 'outbound_delivery_headers::80738062', 'outbound_delivery_headers::80738041', 'outbound_delivery_headers::80738051', 'outbound_delivery_headers::80738055', 'outbound_delivery_headers::80738104']}
+  [5] {'entity_type': 'billing_document_items', 'count': 241, 'node_ids': ['billing_document_items::90504223::10', 'billing_document_items::90504230::10', 'billing_document_items::90504241::10', 'billing_document_items::90504235::10', 'billing_document_items::91150168::10', 'billing_document_items::90504273::10', 'billing_document_items::90504263::10', 'billing_document_items::90504281::10', 'billing_document_items::90504249::20', 'billing_document_items::90504249::10', 'billing_document_items::91150210::20', 'billing_document_items::91150210::10', 'billing_document_items::90504239::10', 'billing_document_items::90504207::10', 'billing_document_items::90504238::10', 'billing_document_items::91150216::10', 'billing_document_items::90504300::10', 'billing_document_items::90504212::10', 'billing_document_items::91150181::30', 'billing_document_items::91150181::50', 'billing_document_items::91150181::20', 'billing_document_items::91150181::10', 'billing_document_items::91150181::40', 'billing_document_items::91150204::10', 'billing_document_items::90504257::10', 'billing_document_items::91150160::10', 'billing_document_items::91150202::10', 'billing_document_items::91150151::10', 'billing_document_items::90504206::10', 'billing_document_items::91150211::10', 'billing_document_items::91150200::10', 'billing_document_items::90504277::20', 'billing_document_items::90504277::10', 'billing_document_items::91150159::10', 'billing_document_items::91150203::10', 'billing_document_items::90504280::10', 'billing_document_items::90678701::10', 'billing_document_items::90504266::10', 'billing_document_items::91150173::10', 'billing_document_items::90504243::30', 'billing_document_items::90504243::100', 'billing_document_items::90504243::40', 'billing_document_items::90504243::90', 'billing_document_items::90504243::70', 'billing_document_items::90504243::20', 'billing_document_items::90504243::50', 'billing_document_items::90504243::110', 'billing_document_items::90504243::80', 'billing_document_items::90504243::120', 'billing_document_items::90504243::10', 'billing_document_items::90504243::60', 'billing_document_items::91150198::10', 'billing_document_items::90504267::10', 'billing_document_items::91150167::10', 'billing_document_items::91150170::10', 'billing_document_items::90504270::10', 'billing_document_items::90504217::10', 'billing_document_items::90504262::20', 'billing_document_items::90504262::10', 'billing_document_items::91150199::10', 'billing_document_items::91150199::20', 'billing_document_items::91150169::10', 'billing_document_items::90504269::10', 'billing_document_items::90504301::40', 'billing_document_items::90504301::20', 'billing_document_items::90504301::30', 'billing_document_items::90504301::10', 'billing_document_items::90504290::10', 'billing_document_items::90678703::20', 'billing_document_items::90678703::10', 'billing_document_items::90678703::30', 'billing_document_items::90504296::10', 'billing_document_items::91150212::10', 'billing_document_items::91150213::10', 'billing_document_items::90504226::10', 'billing_document_items::91150187::10', 'billing_document_items::90504298::20', 'billing_document_items::90504298::40', 'billing_document_items::90504298::30', 'billing_document_items::90504298::10', 'billing_document_items::90504211::10', 'billing_document_items::91150157::10', 'billing_document_items::90628266::10', 'billing_document_items::91150172::10', 'billing_document_items::90504293::10', 'billing_document_items::90678700::10', 'billing_document_items::90504248::10', 'billing_document_items::91150153::10', 'billing_document_items::90504288::10', 'billing_document_items::91150193::10', 'billing_document_items::90504297::10', 'billing_document_items::91150175::10', 'billing_document_items::90504218::10', 'billing_document_items::91150178::10', 'billing_document_items::91150165::20', 'billing_document_items::91150165::10', 'billing_document_items::90504227::10', 'billing_document_items::90504231::10', 'billing_document_items::91150197::10', 'billing_document_items::91150194::10', 'billing_document_items::91150192::10', 'billing_document_items::91150206::10', 'billing_document_items::90504246::10', 'billing_document_items::91150177::10', 'billing_document_items::91150215::10', 'billing_document_items::91150209::10', 'billing_document_items::90504204::10', 'billing_document_items::91150171::10', 'billing_document_items::91150162::10', 'billing_document_items::90504260::10', 'billing_document_items::90504289::10', 'billing_document_items::91150183::20', 'billing_document_items::91150183::30', 'billing_document_items::91150183::10', 'billing_document_items::91150149::20', 'billing_document_items::91150149::30', 'billing_document_items::91150149::40', 'billing_document_items::91150149::10', 'billing_document_items::90504272::10', 'billing_document_items::91150083::10', 'billing_document_items::91150083::20', 'billing_document_items::91150083::30', 'billing_document_items::90628265::10', 'billing_document_items::91150087::10', 'billing_document_items::90678699::10', 'billing_document_items::91150207::10', 'billing_document_items::90504265::40', 'billing_document_items::90504265::30', 'billing_document_items::90504265::20', 'billing_document_items::90504265::10', 'billing_document_items::90504265::60', 'billing_document_items::90504265::50', 'billing_document_items::90504259::10', 'billing_document_items::90504237::10', 'billing_document_items::90504222::10', 'billing_document_items::91150205::10', 'billing_document_items::90504228::20', 'billing_document_items::90504228::10', 'billing_document_items::90504292::10', 'billing_document_items::90504274::10', 'billing_document_items::90504279::20', 'billing_document_items::90504279::10', 'billing_document_items::91150184::10', 'billing_document_items::91150182::30', 'billing_document_items::91150182::10', 'billing_document_items::91150182::20', 'billing_document_items::91150182::40', 'billing_document_items::91150182::50', 'billing_document_items::91150161::10', 'billing_document_items::90504283::10', 'billing_document_items::90504285::10', 'billing_document_items::91150148::10', 'billing_document_items::90504225::10', 'billing_document_items::90504295::10', 'billing_document_items::90504215::10', 'billing_document_items::91150185::20', 'billing_document_items::91150185::10', 'billing_document_items::91150088::10', 'billing_document_items::91150088::20', 'billing_document_items::90504284::10', 'billing_document_items::91150180::10', 'billing_document_items::91150158::10', 'billing_document_items::91150201::10', 'billing_document_items::90504250::10', 'billing_document_items::91150152::10', 'billing_document_items::90504276::10', 'billing_document_items::90504286::10', 'billing_document_items::90504253::40', 'billing_document_items::90504253::50', 'billing_document_items::90504253::10', 'billing_document_items::90504253::30', 'billing_document_items::90504253::20', 'billing_document_items::91150189::10', 'billing_document_items::90504234::10', 'billing_document_items::91150179::10', 'billing_document_items::91150217::10', 'billing_document_items::90504210::10', 'billing_document_items::90504242::10', 'billing_document_items::91150155::10', 'billing_document_items::91150174::20', 'billing_document_items::91150174::10', 'billing_document_items::91150174::40', 'billing_document_items::91150174::50', 'billing_document_items::91150174::60', 'billing_document_items::91150174::30', 'billing_document_items::90678702::10', 'billing_document_items::91150090::10', 'billing_document_items::91150195::10', 'billing_document_items::91150176::20', 'billing_document_items::91150176::10', 'billing_document_items::91150084::10', 'billing_document_items::91150085::10', 'billing_document_items::91150166::10', 'billing_document_items::90504255::10', 'billing_document_items::90504255::40', 'billing_document_items::90504255::20', 'billing_document_items::90504255::30', 'billing_document_items::90504255::50', 'billing_document_items::91150196::10', 'billing_document_items::91150086::10', 'billing_document_items::91150164::20', 'billing_document_items::91150164::10', 'billing_document_items::91150163::10', 'billing_document_items::90678696::10', 'billing_document_items::91150191::10', 'billing_document_items::91150214::10', 'billing_document_items::91150208::10', 'billing_document_items::90504214::10', 'billing_document_items::90504214::20', 'billing_document_items::91150156::10', 'billing_document_items::90504252::20', 'billing_document_items::90504252::10', 'billing_document_items::90504252::30', 'billing_document_items::90504208::10', 'billing_document_items::91150186::10', 'billing_document_items::91150188::110', 'billing_document_items::91150188::20', 'billing_document_items::91150188::60', 'billing_document_items::91150188::70', 'billing_document_items::91150188::80', 'billing_document_items::91150188::90', 'billing_document_items::91150188::10', 'billing_document_items::91150188::120', 'billing_document_items::91150188::40', 'billing_document_items::91150188::30', 'billing_document_items::91150188::50', 'billing_document_items::91150188::100', 'billing_document_items::90678698::20', 'billing_document_items::90678698::10', 'billing_document_items::91150190::10', 'billing_document_items::91150154::10', 'billing_document_items::91150147::30', 'billing_document_items::91150147::20', 'billing_document_items::91150147::10', 'billing_document_items::91150147::40', 'billing_document_items::90504232::10', 'billing_document_items::90504219::10', 'billing_document_items::90504256::10', 'billing_document_items::90504221::10', 'billing_document_items::90504245::10', 'billing_document_items::91150150::10']}
+  ... and 3 more
+  start_node: sales_order_headers::740506
+  start_type: sales_order_headers
+  gaps: []
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Flow: billing_document_headers::90000025
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: error
+  message: Node '90000025' not found in graph.
+  total_count: 0
+
+
+>> NEIGHBORHOOD QUERIES
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Neighborhood: billing_document_headers::90000025
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: error
+  message: Node '90000025' not found in graph.
+  total_count: 0
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Neighborhood: business_partners::100
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Neighborhood of business_partners::310000108 (depth=2)
+  total_count: 16
+  [1] {'node_id': 'business_partners::310000108', 'depth': 0, 'node_type': 'business_partners', 'label': '[business_partners] business_partner=310000108, business_partner_name=Cardenas, Parker and Avila'}
+  [2] {'node_id': 'sales_order_headers::740506', 'depth': 1, 'node_type': 'sales_order_headers', 'label': '[sales_order_headers] sales_order=740506, sold_to_party=310000108, total_net_amount=17108.25'}
+  [3] {'node_id': 'customer_sales_area_assignments::310000108::05::99::ABCD', 'depth': 1, 'node_type': 'customer_sales_area_assignments', 'label': '[customer_sales_area_assignments] customer=310000108, sales_organization=ABCD, distribution_channel=05'}
+  [4] {'node_id': 'customer_company_assignments::ABCD::310000108', 'depth': 1, 'node_type': 'customer_company_assignments', 'label': '[customer_company_assignments] customer=310000108, company_code=ABCD'}
+  [5] {'node_id': 'customer_sales_area_assignments::310000108::RB::99::ABCD', 'depth': 1, 'node_type': 'customer_sales_area_assignments', 'label': '[customer_sales_area_assignments] customer=310000108, sales_organization=ABCD, distribution_channel=RB'}
+  ... and 11 more
+  center_node: business_partners::310000108
+  depth: 2
+  edge_count: 15
+  edges: (15 edges, capped)
+
+
+>> INTEGRITY / ANOMALY CHECKS
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Integrity: delivered_not_billed
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Deliveries without a matching billing document
+  total_count: 3
+  [1] {'delivery_document': '80737721', 'overall_goods_movement_status': 'A', 'creation_date': '2025-03-31'}
+  [2] {'delivery_document': '80737722', 'overall_goods_movement_status': 'A', 'creation_date': '2025-03-31'}
+  [3] {'delivery_document': '80737723', 'overall_goods_movement_status': 'A', 'creation_date': '2025-03-31'}
+  check_type: delivered_not_billed
+  capped: False
+  full_count: 3
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Integrity: payments_without_journal_link
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Payments not linked to any journal entry
+  total_count: 20
+  [1] {'accounting_document': '9400000268', 'clearing_accounting_document': '9400635943', 'customer': '320000083', 'amount_in_transaction_currency': '1194.03'}
+  [2] {'accounting_document': '9400000270', 'clearing_accounting_document': '9400635942', 'customer': '320000083', 'amount_in_transaction_currency': '678.03'}
+  [3] {'accounting_document': '9400000271', 'clearing_accounting_document': '9400635941', 'customer': '320000083', 'amount_in_transaction_currency': '1614.0'}
+  [4] {'accounting_document': '9400000272', 'clearing_accounting_document': '9400635940', 'customer': '320000083', 'amount_in_transaction_currency': '1494.0'}
+  [5] {'accounting_document': '9400000274', 'clearing_accounting_document': '9400635939', 'customer': '320000083', 'amount_in_transaction_currency': '1493.97'}
+  ... and 15 more
+  check_type: payments_without_journal_link
+  capped: False
+  full_count: 20
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Integrity: orders_without_delivery
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Sales orders with no delivery
+  total_count: 14
+  [1] {'sales_order': '740584', 'sold_to_party': '320000108', 'total_net_amount': '150.85', 'creation_date': '2025-04-02'}
+  [2] {'sales_order': '740585', 'sold_to_party': '320000107', 'total_net_amount': '177.97', 'creation_date': '2025-04-02'}
+  [3] {'sales_order': '740588', 'sold_to_party': '320000108', 'total_net_amount': '118.65', 'creation_date': '2025-04-02'}
+  [4] {'sales_order': '740589', 'sold_to_party': '320000107', 'total_net_amount': '131.31', 'creation_date': '2025-04-02'}
+  [5] {'sales_order': '740591', 'sold_to_party': '320000108', 'total_net_amount': '303.39', 'creation_date': '2025-04-02'}
+  ... and 9 more
+  check_type: orders_without_delivery
+  capped: False
+  full_count: 14
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Integrity: incomplete_o2c_flows
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Sales orders with incomplete O2C flow chains
+  total_count: 8
+  [1] {'order_node': 'sales_order_headers::740584', 'label': '[sales_order_headers] sales_order=740584, sold_to_party=320000108, total_net_amount=150.85', 'missing_steps': ['billing_document_items'], 'reached_steps': ['sales_order_headers', 'sales_order_items', 'outbound_delivery_items', 'outbound_delivery_headers', 'billing_document_headers', 'journal_entry_items_ar', 'payments_accounts_receivable']}
+  [2] {'order_node': 'sales_order_headers::740585', 'label': '[sales_order_headers] sales_order=740585, sold_to_party=320000107, total_net_amount=177.97', 'missing_steps': ['billing_document_items'], 'reached_steps': ['sales_order_headers', 'sales_order_items', 'outbound_delivery_items', 'outbound_delivery_headers', 'billing_document_headers', 'journal_entry_items_ar', 'payments_accounts_receivable']}
+  [3] {'order_node': 'sales_order_headers::740588', 'label': '[sales_order_headers] sales_order=740588, sold_to_party=320000108, total_net_amount=118.65', 'missing_steps': ['billing_document_items'], 'reached_steps': ['sales_order_headers', 'sales_order_items', 'outbound_delivery_items', 'outbound_delivery_headers', 'billing_document_headers', 'journal_entry_items_ar', 'payments_accounts_receivable']}
+  [4] {'order_node': 'sales_order_headers::740589', 'label': '[sales_order_headers] sales_order=740589, sold_to_party=320000107, total_net_amount=131.31', 'missing_steps': ['billing_document_items'], 'reached_steps': ['sales_order_headers', 'sales_order_items', 'outbound_delivery_items', 'outbound_delivery_headers', 'billing_document_headers', 'journal_entry_items_ar', 'payments_accounts_receivable']}
+  [5] {'order_node': 'sales_order_headers::740597', 'label': '[sales_order_headers] sales_order=740597, sold_to_party=320000107, total_net_amount=118.64', 'missing_steps': ['billing_document_items'], 'reached_steps': ['sales_order_headers', 'sales_order_items', 'outbound_delivery_items', 'outbound_delivery_headers', 'billing_document_headers', 'journal_entry_items_ar', 'payments_accounts_receivable']}
+  ... and 3 more
+  check_type: incomplete_o2c_flows
+  capped: False
+  full_count: 8
+
+
+>> RELATIONSHIP QUERIES
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Relationship: summary
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Relationship summary: 21 types, 24994 edges, 482 uncertain
+  total_count: 21
+  [1] {'edge_type': 'product_storage_locations->product_plants', 'count': 16723, 'uncertain_count': 0}
+  [2] {'edge_type': 'product_plants->products', 'count': 3036, 'uncertain_count': 0}
+  [3] {'edge_type': 'product_plants->plants', 'count': 3036, 'uncertain_count': 0}
+  [4] {'edge_type': 'billing_document_items->billing_document_headers', 'count': 245, 'uncertain_count': 0}
+  [5] {'edge_type': 'billing_document_items->outbound_delivery_headers', 'count': 245, 'uncertain_count': 245}
+  ... and 16 more
+  total_edge_types: 21
+  total_edges: 24994
+  total_uncertain: 482
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Relationship: top_degree
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Top 5 nodes by degree
+  total_count: 5
+  [1] {'node_id': 'business_partners::320000083', 'degree': 434, 'node_type': 'business_partners', 'label': '[business_partners] business_partner=320000083, business_partner_name=Nelson, Fitzpatrick and Jordan'}
+  [2] {'node_id': 'plants::1001', 'degree': 69, 'node_type': 'plants', 'label': '[plants] plant=1001, plant_name=Lake Christopher Plant'}
+  [3] {'node_id': 'plants::1002', 'degree': 69, 'node_type': 'plants', 'label': '[plants] plant=1002, plant_name=Lake Erica Plant'}
+  [4] {'node_id': 'plants::1003', 'degree': 69, 'node_type': 'plants', 'label': '[plants] plant=1003, plant_name=North Timothybury Plant'}
+  [5] {'node_id': 'plants::1005', 'degree': 69, 'node_type': 'plants', 'label': '[plants] plant=1005, plant_name=Port Kevin Plant'}
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Relationship: uncertain
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: ok
+  message: Uncertain edges (482 total)
+  total_count: 5
+  [1] {'source': 'outbound_delivery_items::80738076::000010', 'target': 'sales_order_headers::740556', 'edge_type': 'outbound_delivery_items->sales_order_headers', 'note': 'ID format differs (delivery ref vs sales order number)'}
+  [2] {'source': 'outbound_delivery_items::80738076::000020', 'target': 'sales_order_headers::740556', 'edge_type': 'outbound_delivery_items->sales_order_headers', 'note': 'ID format differs (delivery ref vs sales order number)'}
+  [3] {'source': 'outbound_delivery_items::80738076::000030', 'target': 'sales_order_headers::740556', 'edge_type': 'outbound_delivery_items->sales_order_headers', 'note': 'ID format differs (delivery ref vs sales order number)'}
+  [4] {'source': 'outbound_delivery_items::80738076::000040', 'target': 'sales_order_headers::740556', 'edge_type': 'outbound_delivery_items->sales_order_headers', 'note': 'ID format differs (delivery ref vs sales order number)'}
+  [5] {'source': 'outbound_delivery_items::80738076::000050', 'target': 'sales_order_headers::740556', 'edge_type': 'outbound_delivery_items->sales_order_headers', 'note': 'ID format differs (delivery ref vs sales order number)'}
+  total_uncertain: 482
+
+
+>> ERROR HANDLING
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Error test: {'query_type': 'invalid_type'}
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: error
+  message: Invalid query_type 'invalid_type'. Must be one of ('aggregation', 'flow_trace', 'neighborhood', 'integrity_check', 'relationship')
+  total_count: 0
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Error test: {'query_type': 'aggregation'}
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: error
+  message: Aggregation queries require a 'metric' field.
+  total_count: 0
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Error test: {'query_type': 'flow_trace', 'entity_id': 'NONEXISTENT_NODE'}
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: error
+  message: Node 'NONEXISTENT_NODE' not found in graph.
+  total_count: 0
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Error test: {'query_type': 'integrity_check', 'check_type': 'fake_check'}
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  status: error
+  message: "Unknown check_type 'fake_check'. Known: billed_without_delivery, billing_without_journal, delivered_not_billed, disconnected_nodes, incomplete_o2c_flows, orders_without_delivery, payments_without_journal_link"
+  total_count: 0
+
+
+>> AVAILABLE METRICS
+  billing_document_item_count: Billing documents by number of items
+  customer_billing_count: Customers by number of billing documents
+  customer_journal_entry_count: Customers by number of journal entries
+  customer_payment_count: Customers by number of payments
+  customer_sales_order_count: Customers by number of sales orders
+  delivery_item_count: Delivery documents by number of items
+  plant_product_count: Plants by number of products
+  product_billing_document_count: Products by number of billing document items
+  product_sales_order_count: Products by number of sales order items
+  sales_order_item_count: Sales orders by number of items
+
+>> AVAILABLE INTEGRITY CHECKS
+  billed_without_delivery: Billing documents referencing non-existent deliveries
+  billing_without_journal: Billing documents with no journal entry
+  delivered_not_billed: Deliveries without a matching billing document
+  disconnected_nodes: Nodes with zero edges in the graph
+  incomplete_o2c_flows: Sales orders with incomplete O2C flow chains
+  orders_without_delivery: Sales orders with no delivery
+  payments_without_journal_link: Payments not linked to any journal entry
+
+========================================================================
+PHASE 3 DEMO COMPLETE
+========================================================================
+  Queries run:    19
+  OK:             13
+  No results:     0
+  Errors:         6
+  Results saved:  C:\Users\jagre\OneDrive\Desktop\Dodge AI\output\query\demo_results.json
+

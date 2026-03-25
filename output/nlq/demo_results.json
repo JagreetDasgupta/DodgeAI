@@ -1,0 +1,193 @@
+[
+  {
+    "label": "Aggregation: customer sales orders",
+    "question": "Which customers have the most sales orders?",
+    "expected_action": "answer",
+    "actual_action": "answer",
+    "pass": true,
+    "structured_query": {
+      "query_type": "aggregation",
+      "metric": "customer_sales_order_count",
+      "order_by": "desc",
+      "limit": 10
+    },
+    "answer": "\ud83d\udcca **Customers by number of sales orders** (8 results)\n  1. sold_to_party=320000083 \u2014 **72** records\n  2. sold_to_party=320000082 \u2014 **9** records\n  3. sold_to_party=320000108 \u2014 **7** records\n  4. sold_to_party=320000107 \u2014 **7** records\n  5. sold_to_party=310000109 \u2014 **2** records\n  6. sold_to_party=320000088 \u2014 **1** records\n  7. sold_to_party=320000085 \u2014 **1** records\n  8. sold_to_party=310000108 \u2014 **1** records\n\n\ud83d\udd0d Source: QueryEngine (data-backed)",
+    "llm_raw": "{\"query_type\": \"aggregation\", \"metric\": \"customer_sales_order_count\", \"order_by\": \"desc\", \"limit\": 10}"
+  },
+  {
+    "label": "Aggregation: product billing",
+    "question": "Which products are associated with the highest number of billing documents?",
+    "expected_action": "answer",
+    "actual_action": "answer",
+    "pass": true,
+    "structured_query": {
+      "query_type": "aggregation",
+      "metric": "product_billing_document_count",
+      "order_by": "desc",
+      "limit": 10
+    },
+    "answer": "\ud83d\udcca **Products by number of billing document items** (10 results)\n  1. material=S8907367039280 \u2014 **22** records\n  2. material=S8907367008620 \u2014 **22** records\n  3. material=S8907367042006 \u2014 **16** records\n  4. material=S8907367013532 \u2014 **15** records\n  5. material=S8907367001003 \u2014 **9** records\n  6. material=S8907367038122 \u2014 **8** records\n  7. material=S8907367035664 \u2014 **8** records\n  8. material=S8907367010814 \u2014 **8** records\n  9. material=S8907367002512 \u2014 **7** records\n  10. material=S8907367025344 \u2014 **6** records\n\n\ud83d\udd0d Source: QueryEngine (data-backed)",
+    "llm_raw": "{\"query_type\": \"aggregation\", \"metric\": \"product_billing_document_count\", \"order_by\": \"desc\", \"limit\": 10}"
+  },
+  {
+    "label": "Aggregation: plant products",
+    "question": "Which plants have the most products?",
+    "expected_action": "answer",
+    "actual_action": "answer",
+    "pass": true,
+    "structured_query": {
+      "query_type": "aggregation",
+      "metric": "plant_product_count",
+      "order_by": "desc",
+      "limit": 10
+    },
+    "answer": "\ud83d\udcca **Plants by number of products** (10 results)\n  1. plant=WB07 \u2014 **69** records\n  2. plant=WB05 \u2014 **69** records\n  3. plant=UP07 \u2014 **69** records\n  4. plant=UP05 \u2014 **69** records\n  5. plant=TM07 \u2014 **69** records\n  6. plant=TM05 \u2014 **69** records\n  7. plant=TL07 \u2014 **69** records\n  8. plant=TL05 \u2014 **69** records\n  9. plant=RJ07 \u2014 **69** records\n  10. plant=PB07 \u2014 **69** records\n\n\ud83d\udd0d Source: QueryEngine (data-backed)",
+    "llm_raw": "{\"query_type\": \"aggregation\", \"metric\": \"plant_product_count\", \"order_by\": \"desc\", \"limit\": 10}"
+  },
+  {
+    "label": "Flow trace: sales order",
+    "question": "Trace the full flow of sales order 740506",
+    "expected_action": "answer",
+    "actual_action": "answer",
+    "pass": true,
+    "structured_query": {
+      "query_type": "flow_trace",
+      "entity_type": "sales_order_headers",
+      "entity_id": "740506",
+      "depth": 8
+    },
+    "answer": "\ud83d\udd17 **Flow trace from \ud83d\udce6 Sales Orders** (node: sales_order_headers::740506)\n   Total nodes reached: 21365\n\n   \ud83d\udce6 Sales Orders \u2192 \u2705 100 node(s)\n   \ud83d\udcc4 Sales Order Items \u2192 \u2705 167 node(s)\n   \ud83d\udccb Delivery Items \u2192 \u2705 135 node(s)\n   \ud83d\ude9a Deliveries \u2192 \u2705 84 node(s)\n   \ud83d\udcd1 Billing Items \u2192 \u2705 241 node(s)\n   \ud83e\uddfe Billing Documents \u2192 \u2705 159 node(s)\n   \ud83d\udcd2 Journal Entries \u2192 \u2705 123 node(s)\n   \ud83d\udcb0 Payments \u2192 \u2705 120 node(s)\n\n   \u2705 Complete flow \u2014 no gaps\n\n\ud83d\udd0d Source: QueryEngine (data-backed)",
+    "llm_raw": "{\"query_type\": \"flow_trace\", \"entity_type\": \"sales_order_headers\", \"entity_id\": \"740506\", \"depth\": 8}"
+  },
+  {
+    "label": "Flow trace: missing ID",
+    "question": "Trace the flow of a sales order",
+    "expected_action": "clarify",
+    "actual_action": "clarify",
+    "pass": true,
+    "structured_query": null,
+    "answer": "Which entity would you like to trace? Please provide the entity type and ID (e.g., 'sales order 740506').",
+    "llm_raw": "{\"action\": \"clarify\", \"message\": \"Which entity would you like to trace? Please provide the entity type and ID (e.g., 'sales order 740506').\"}"
+  },
+  {
+    "label": "Neighborhood: business partner",
+    "question": "Show all nodes connected to business partner 320000083 within 2 hops",
+    "expected_action": "answer",
+    "actual_action": "answer",
+    "pass": true,
+    "structured_query": {
+      "query_type": "neighborhood",
+      "entity_type": "business_partners",
+      "entity_id": "320000083",
+      "depth": 2
+    },
+    "answer": "\ud83c\udfd8 **Neighborhood of business_partners::320000083** (depth=2)\n   945 nodes, 1137 edges\n   billing_document_cancellations: 71\n   billing_document_headers: 143\n   billing_document_items: 219\n   business_partner_addresses: 1\n   business_partners: 1\n   customer_company_assignments: 1\n   customer_sales_area_assignments: 4\n   journal_entry_items_ar: 107\n   outbound_delivery_items: 110\n   payments_accounts_receivable: 106\n   sales_order_headers: 72\n   sales_order_items: 110\n\n\ud83d\udd0d Source: QueryEngine (data-backed)",
+    "llm_raw": "{\"query_type\": \"neighborhood\", \"entity_type\": \"business_partners\", \"entity_id\": \"320000083\", \"depth\": 2}"
+  },
+  {
+    "label": "Integrity: delivered not billed",
+    "question": "Find deliveries that were not billed",
+    "expected_action": "answer",
+    "actual_action": "answer",
+    "pass": true,
+    "structured_query": {
+      "query_type": "integrity_check",
+      "check_type": "delivered_not_billed"
+    },
+    "answer": "\u26a0 **Deliveries without a matching billing document**: 3 issue(s) found\n  1. delivery_document=80737721, overall_goods_movement_status=A, creation_date=2025-03-31\n  2. delivery_document=80737722, overall_goods_movement_status=A, creation_date=2025-03-31\n  3. delivery_document=80737723, overall_goods_movement_status=A, creation_date=2025-03-31\n\n\ud83d\udd0d Source: QueryEngine (data-backed)",
+    "llm_raw": "{\"query_type\": \"integrity_check\", \"check_type\": \"delivered_not_billed\"}"
+  },
+  {
+    "label": "Integrity: incomplete flows",
+    "question": "Show me incomplete O2C flows",
+    "expected_action": "answer",
+    "actual_action": "answer",
+    "pass": true,
+    "structured_query": {
+      "query_type": "integrity_check",
+      "check_type": "incomplete_o2c_flows"
+    },
+    "answer": "\u26a0 **Sales orders with incomplete O2C flow chains**: 8 issue(s) found\n  1. order_node=sales_order_headers::740584, label=[sales_order_headers] sales_order=740584, sold_to_party=320000108, total_net_amount=150.85\n     Missing: billing_document_items\n  2. order_node=sales_order_headers::740585, label=[sales_order_headers] sales_order=740585, sold_to_party=320000107, total_net_amount=177.97\n     Missing: billing_document_items\n  3. order_node=sales_order_headers::740588, label=[sales_order_headers] sales_order=740588, sold_to_party=320000108, total_net_amount=118.65\n     Missing: billing_document_items\n  4. order_node=sales_order_headers::740589, label=[sales_order_headers] sales_order=740589, sold_to_party=320000107, total_net_amount=131.31\n     Missing: billing_document_items\n  5. order_node=sales_order_headers::740597, label=[sales_order_headers] sales_order=740597, sold_to_party=320000107, total_net_amount=118.64\n     Missing: billing_document_items\n  ... and 3 more\n\n\ud83d\udd0d Source: QueryEngine (data-backed)",
+    "llm_raw": "{\"query_type\": \"integrity_check\", \"check_type\": \"incomplete_o2c_flows\"}"
+  },
+  {
+    "label": "Integrity: unlinked payments",
+    "question": "Are there any payments not linked to journal entries?",
+    "expected_action": "answer",
+    "actual_action": "answer",
+    "pass": true,
+    "structured_query": {
+      "query_type": "integrity_check",
+      "check_type": "payments_without_journal_link"
+    },
+    "answer": "\u26a0 **Payments not linked to any journal entry**: 20 issue(s) found\n  1. accounting_document=9400000268, clearing_accounting_document=9400635943, customer=320000083, amount_in_transaction_currency=1194.03\n  2. accounting_document=9400000270, clearing_accounting_document=9400635942, customer=320000083, amount_in_transaction_currency=678.03\n  3. accounting_document=9400000271, clearing_accounting_document=9400635941, customer=320000083, amount_in_transaction_currency=1614.0\n  4. accounting_document=9400000272, clearing_accounting_document=9400635940, customer=320000083, amount_in_transaction_currency=1494.0\n  5. accounting_document=9400000274, clearing_accounting_document=9400635939, customer=320000083, amount_in_transaction_currency=1493.97\n  ... and 15 more\n\n\ud83d\udd0d Source: QueryEngine (data-backed)",
+    "llm_raw": "{\"query_type\": \"integrity_check\", \"check_type\": \"payments_without_journal_link\"}"
+  },
+  {
+    "label": "Relationship: uncertain edges",
+    "question": "Which relationships are uncertain in the graph?",
+    "expected_action": "answer",
+    "actual_action": "answer",
+    "pass": true,
+    "structured_query": {
+      "query_type": "relationship",
+      "metric": "uncertain"
+    },
+    "answer": "\ud83d\udd00 **Uncertain relationships (482 total)**\n   Total uncertain edges: 482\n\n  1. billing document items \u2192 outbound delivery headers \u2014 **245** edges\n  2. outbound delivery items \u2192 sales order headers \u2014 **137** edges\n  3. payments accounts receivable \u2192 journal entry items ar \u2014 **100** edges\n\n\ud83d\udd0d Source: QueryEngine (data-backed)",
+    "llm_raw": "{\"query_type\": \"relationship\", \"metric\": \"uncertain\"}"
+  },
+  {
+    "label": "Relationship: top degree",
+    "question": "Which nodes have the highest degree in the graph?",
+    "expected_action": "answer",
+    "actual_action": "answer",
+    "pass": true,
+    "structured_query": {
+      "query_type": "relationship",
+      "metric": "top_degree",
+      "limit": 10
+    },
+    "answer": "\ud83d\udd00 **Top 10 nodes by degree**\n\n  1. [business_partners] [business_partners] business_partner=320000083, business_partner_name=Nelson, Fitzpatrick and Jordan \u2014 degree **434**\n  2. [plants] [plants] plant=1001, plant_name=Lake Christopher Plant \u2014 degree **69**\n  3. [plants] [plants] plant=1002, plant_name=Lake Erica Plant \u2014 degree **69**\n  4. [plants] [plants] plant=1003, plant_name=North Timothybury Plant \u2014 degree **69**\n  5. [plants] [plants] plant=1005, plant_name=Port Kevin Plant \u2014 degree **69**\n  6. [plants] [plants] plant=1006, plant_name=Lake Andreafort Plant \u2014 degree **69**\n  7. [plants] [plants] plant=1007, plant_name=Rossside Plant \u2014 degree **69**\n  8. [plants] [plants] plant=1010, plant_name=Kennedychester Plant \u2014 degree **69**\n  9. [plants] [plants] plant=1011, plant_name=North Joseph Plant \u2014 degree **69**\n  10. [plants] [plants] plant=1012, plant_name=Lake Ashley Plant \u2014 degree **69**\n\n\ud83d\udd0d Source: QueryEngine (data-backed)",
+    "llm_raw": "{\"query_type\": \"relationship\", \"metric\": \"top_degree\", \"limit\": 10}"
+  },
+  {
+    "label": "Reject: joke",
+    "question": "Tell me a joke about SAP",
+    "expected_action": "reject",
+    "actual_action": "reject",
+    "pass": true,
+    "structured_query": null,
+    "answer": "\u274c Out of scope.\n\nThis system only supports:\n\u2022 Sales orders, deliveries, billing, payments\n\u2022 Aggregations, flow tracing, integrity checks, graph relationships\n\nTry asking:\n\u2022 \"Which customers have the most orders?\"\n\u2022 \"Trace sales order 740506\"\n\u2022 \"Find deliveries that were not billed\"",
+    "llm_raw": null
+  },
+  {
+    "label": "Reject: recipe",
+    "question": "Give me a recipe for pasta",
+    "expected_action": "reject",
+    "actual_action": "reject",
+    "pass": true,
+    "structured_query": null,
+    "answer": "\u274c Out of scope.\n\nThis system only supports:\n\u2022 Sales orders, deliveries, billing, payments\n\u2022 Aggregations, flow tracing, integrity checks, graph relationships\n\nTry asking:\n\u2022 \"Which customers have the most orders?\"\n\u2022 \"Trace sales order 740506\"\n\u2022 \"Find deliveries that were not billed\"",
+    "llm_raw": null
+  },
+  {
+    "label": "Reject: code generation",
+    "question": "Write code to sort a list in Python",
+    "expected_action": "reject",
+    "actual_action": "reject",
+    "pass": true,
+    "structured_query": null,
+    "answer": "\u274c Out of scope.\n\nThis system only supports:\n\u2022 Sales orders, deliveries, billing, payments\n\u2022 Aggregations, flow tracing, integrity checks, graph relationships\n\nTry asking:\n\u2022 \"Which customers have the most orders?\"\n\u2022 \"Trace sales order 740506\"\n\u2022 \"Find deliveries that were not billed\"",
+    "llm_raw": null
+  },
+  {
+    "label": "Reject: too short",
+    "question": "hi",
+    "expected_action": "reject",
+    "actual_action": "reject",
+    "pass": true,
+    "structured_query": null,
+    "answer": "\u274c Please provide a more specific question about the SAP O2C dataset.\n\nTry asking:\n\u2022 \"Which customers have the most sales orders?\"\n\u2022 \"Trace the flow of sales order 740506\"\n\u2022 \"Find deliveries that were not billed\"",
+    "llm_raw": null
+  }
+]

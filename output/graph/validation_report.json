@@ -1,0 +1,135 @@
+{
+  "node_count": 21393,
+  "edge_count": 24994,
+  "node_counts_by_type": {
+    "sales_order_headers": 100,
+    "sales_order_items": 167,
+    "sales_order_schedule_lines": 179,
+    "outbound_delivery_headers": 86,
+    "outbound_delivery_items": 137,
+    "billing_document_headers": 163,
+    "billing_document_items": 245,
+    "billing_document_cancellations": 80,
+    "journal_entry_items_ar": 123,
+    "payments_accounts_receivable": 120,
+    "business_partners": 8,
+    "business_partner_addresses": 8,
+    "customer_company_assignments": 8,
+    "customer_sales_area_assignments": 28,
+    "products": 69,
+    "product_descriptions": 69,
+    "product_plants": 3036,
+    "product_storage_locations": 16723,
+    "plants": 44
+  },
+  "edge_counts_by_type": {
+    "sales_order_headers->business_partners": 100,
+    "sales_order_items->sales_order_headers": 167,
+    "sales_order_items->products": 167,
+    "sales_order_schedule_lines->sales_order_items": 179,
+    "outbound_delivery_items->outbound_delivery_headers": 137,
+    "outbound_delivery_items->sales_order_headers": 137,
+    "billing_document_headers->business_partners": 163,
+    "billing_document_items->billing_document_headers": 245,
+    "billing_document_items->outbound_delivery_headers": 245,
+    "billing_document_cancellations->billing_document_headers": 80,
+    "journal_entry_items_ar->billing_document_headers": 123,
+    "journal_entry_items_ar->business_partners": 123,
+    "payments_accounts_receivable->business_partners": 120,
+    "payments_accounts_receivable->journal_entry_items_ar": 100,
+    "business_partner_addresses->business_partners": 8,
+    "customer_company_assignments->business_partners": 8,
+    "customer_sales_area_assignments->business_partners": 28,
+    "product_descriptions->products": 69,
+    "product_plants->products": 3036,
+    "product_plants->plants": 3036,
+    "product_storage_locations->product_plants": 16723
+  },
+  "uncertain_edges": 482,
+  "connected_components": 1,
+  "largest_component_size": 21393,
+  "smallest_component_size": 21393,
+  "expected_fk_relationships": 21,
+  "covered_fk_relationships": 21,
+  "missing_fk_relationships": [],
+  "disconnected_node_count": 0,
+  "disconnected_by_type": {},
+  "incomplete_flow_count": 100,
+  "incomplete_flow_sample": [
+    {
+      "order_node": "sales_order_headers::740506",
+      "missing_steps": [
+        "outbound_delivery_items",
+        "outbound_delivery_headers",
+        "billing_document_items",
+        "billing_document_headers",
+        "journal_entry_items_ar",
+        "payments_accounts_receivable"
+      ],
+      "reached_steps": [
+        "sales_order_headers",
+        "sales_order_items"
+      ]
+    },
+    {
+      "order_node": "sales_order_headers::740507",
+      "missing_steps": [
+        "outbound_delivery_items",
+        "outbound_delivery_headers",
+        "billing_document_items",
+        "billing_document_headers",
+        "journal_entry_items_ar",
+        "payments_accounts_receivable"
+      ],
+      "reached_steps": [
+        "sales_order_headers",
+        "sales_order_items"
+      ]
+    },
+    {
+      "order_node": "sales_order_headers::740508",
+      "missing_steps": [
+        "outbound_delivery_items",
+        "outbound_delivery_headers",
+        "billing_document_items",
+        "billing_document_headers",
+        "journal_entry_items_ar",
+        "payments_accounts_receivable"
+      ],
+      "reached_steps": [
+        "sales_order_headers",
+        "sales_order_items"
+      ]
+    },
+    {
+      "order_node": "sales_order_headers::740509",
+      "missing_steps": [
+        "outbound_delivery_items",
+        "outbound_delivery_headers",
+        "billing_document_items",
+        "billing_document_headers",
+        "journal_entry_items_ar",
+        "payments_accounts_receivable"
+      ],
+      "reached_steps": [
+        "sales_order_headers",
+        "sales_order_items"
+      ]
+    },
+    {
+      "order_node": "sales_order_headers::740510",
+      "missing_steps": [
+        "outbound_delivery_items",
+        "outbound_delivery_headers",
+        "billing_document_items",
+        "billing_document_headers",
+        "journal_entry_items_ar",
+        "payments_accounts_receivable"
+      ],
+      "reached_steps": [
+        "sales_order_headers",
+        "sales_order_items"
+      ]
+    }
+  ]
+}
