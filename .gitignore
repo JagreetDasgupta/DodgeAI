@@ -21,8 +21,8 @@ env.bak/
 venv.bak/
 
 # SQLite databases
-*.db
-*.sqlite3
+# *.db
+# *.sqlite3
 
 # OS generated files
 .DS_Store
@@ -35,3 +35,6 @@ Thumbs.db
 
 # Notebooks
 .ipynb_checkpoints/
+
+!output/sap_o2c.db
+!output/graph/sap_o2c_graph.graphml
